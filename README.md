@@ -44,10 +44,8 @@ To set up the project locally, follow these steps:
 1. **Run the Script**: Execute the main script to preprocess data, train the model, and generate visualizations:
 
    ```bash
-   python sentiment_analysis.py
+   python sentiment.py
    ```
-
-   (Replace `sentiment_analysis.py` with your script filename.)
 
 2. **Predict Sentiment**: Use the `predict` function to classify new text:
 
