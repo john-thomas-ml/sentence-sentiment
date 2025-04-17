@@ -1,4 +1,4 @@
-# sentence-sentiment
+# sentence-sentiment: Deep Learning Sentiment Classifier
 
 ## Overview
 
