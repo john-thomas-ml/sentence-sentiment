@@ -41,11 +41,11 @@ To set up the project locally, follow these steps:
 
 ## Usage
 
-1. **Run the Script**: Execute the main script to preprocess data, train the model, and generate visualizations:
+1. **Run the Notebook**: Open and execute the `sentiment.ipynb` Jupyter Notebook to preprocess data, train the model, and generate visualizations:
 
-   ```bash
-   python sentiment.py
-   ```
+   - Launch Jupyter Notebook:
+     ```bash
+     jupyter notebook
 
 2. **Predict Sentiment**: Use the `predict` function to classify new text:
 
