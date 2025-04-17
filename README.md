@@ -21,8 +21,7 @@ To set up the project locally, follow these steps:
 1. **Clone the Repository**:
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/john-thomas-ml/sentence-sentiment.git
    ```
 
 2. **Install Dependencies**: Install the required Python libraries:
