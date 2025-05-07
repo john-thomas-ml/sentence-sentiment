@@ -79,13 +79,14 @@ To set up the project locally, follow these steps:
 
 The model is a Sequential neural network with:
 
-- `Embedding(input_size, 100)`: Maps tokens to 100-dimensional vectors.
-- `BatchNormalization()`: Stabilizes training.
-- `Bidirectional(LSTM(128, return_sequences=True))`: Captures bidirectional context.
-- `Dropout(0.2)`: Reduces overfitting.
-- `Bidirectional(LSTM(64))`: Further processes features.
-- `Dropout(0.3)`: Additional regularization.
-- `Dense(6, activation='softmax')`: Outputs probabilities for 6 classes.
+-`Embedding(input_size, 100)`: Converts input tokens into dense 100-dimensional vectors.
+-`Bidirectional(LSTM(128, return_sequences=True))`: Processes the sequence in both forward and backward directions, returning the full -sequence output.
+-`BatchNormalization()`: Normalizes activations to stabilize and accelerate training.
+-`ReLU()`: Applies the ReLU activation function to introduce non-linearity.
+-`Dropout(0.2)`: Randomly deactivates 20% of neurons to help prevent overfitting.
+-`Bidirectional(LSTM(64))`: Further processes the features in both directions, outputting the final hidden state.
+-`Dropout(0.3)`: Adds additional regularization by randomly dropping 30% of neurons.
+-`Dense(6, activation='softmax')`: Produces probability distributions over 6 output classes.
 
 ### Training Details
 
