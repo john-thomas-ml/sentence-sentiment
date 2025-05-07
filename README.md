@@ -79,14 +79,37 @@ To set up the project locally, follow these steps:
 
 The model is a Sequential neural network with:
 
--`Embedding(input_size, 100)`: Converts input tokens into dense 100-dimensional vectors.
--`Bidirectional(LSTM(128, return_sequences=True))`: Processes the sequence in both forward and backward directions, returning the full -sequence output.
--`BatchNormalization()`: Normalizes activations to stabilize and accelerate training.
--`ReLU()`: Applies the ReLU activation function to introduce non-linearity.
--`Dropout(0.2)`: Randomly deactivates 20% of neurons to help prevent overfitting.
--`Bidirectional(LSTM(64))`: Further processes the features in both directions, outputting the final hidden state.
--`Dropout(0.3)`: Adds additional regularization by randomly dropping 30% of neurons.
--`Dense(6, activation='softmax')`: Produces probability distributions over 6 output classes.
+1. **Embedding**  
+   `Embedding(input_size, 100)`  
+   Converts input tokens into dense 100-dimensional vectors.
+
+2. **Bidirectional LSTM (Layer 1)**  
+   `Bidirectional(LSTM(128, return_sequences=True))`  
+   Processes the input sequence in both forward and backward directions, returning the full sequence.
+
+3. **Batch Normalization**  
+   `BatchNormalization()`  
+   Normalizes activations to stabilize and speed up training.
+
+4. **ReLU Activation**  
+   `ReLU()`  
+   Applies the ReLU activation function to introduce non-linearity.
+
+5. **Dropout (20%)**  
+   `Dropout(0.2)`  
+   Randomly deactivates 20% of neurons to help prevent overfitting.
+
+6. **Bidirectional LSTM (Layer 2)**  
+   `Bidirectional(LSTM(64))`  
+   Further processes the features in both directions, outputting the final hidden state.
+
+7. **Dropout (30%)**  
+   `Dropout(0.3)`  
+   Adds additional regularization by randomly dropping 30% of neurons.
+
+8. **Output Layer**  
+   `Dense(6, activation='softmax')`  
+   Produces probability distributions over 6 output classes.
 
 ### Training Details
 
